@@ -1,0 +1,78 @@
+/*body {
+    background-color: rgb(72, 72, 72);
+    height: 100vh;
+    margin:0;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-areas: 'h h' 'n m' 'f f';
+    grid-template-rows: 170px auto 70px;
+  }*/
+
+  body {
+    height: 100%;
+    margin: 0px;
+  }
+
+  html { /* Allows for actual full screen background image*/
+    /* The image used */
+    background-image: url('Metazoan_Background_1.png');
+
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*header > img { width: 150px; }*/
+  header {
+     grid-area: h;
+     background-color: rgba(0, 0, 0, 0.7);
+     font-size: 1.2em;
+     padding-bottom:10px;
+     display: flex;
+     align-items: center;
+  }
+  header > section {
+    text-align: center;
+    width: calc(100% );
+  }
+  #Header_Title {
+    font-family: "Permanent Marker";
+    font-size: 50px;
+    color: rgb(12, 122, 4);
+  }
+  #Logo{
+  position: absolute;
+  left: 1.5%;
+  top: 5px;
+  width: 150px;
+  padding: 10px;
+  }
+  /*
+  nav {  
+    display: flex;
+    flex-direction: column;
+    grid-area: n;
+    padding:10px;
+    background-color: rgb(161, 161, 161); }*/
+  /*nav a { 
+    color: white; 
+    margin:5px;
+    padding:5px;
+    border: 1px solid white;
+  }*/
+  footer { 
+    grid-area: f;
+    padding: 10px 20%;
+    text-align: right;
+    background-color: rgba(100, 100, 100, 0);
+  }
+  main {
+    grid-area: m;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

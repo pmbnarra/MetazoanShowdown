@@ -1,0 +1,45 @@
+<html>
+
+  <link rel="shortcut icon" type="image/png" href="images/icon.png"><!-- Fixes Favicon error?-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <script src="./javascripts/requests/playersRequests.js"></script>
+    <script src="./javascripts/requests/roomRequests.js"></script>
+    <script src="./javascripts/authentication/session.js"></script>
+    <script src="./javascripts/rooms.js"></script>
+</head>
+<body>
+    <header>
+        <section>
+          <p id="Header_Title">Metazoan Showdown</p>
+          <img id="Logo" src="/images/Logo_White.png">
+          <h3> Game Rooms</h3>
+        </section>
+        <section class="auth"> 
+            <h4>User: <span  id="username"></span></h2>
+            <input type="button" value="Logout" onclick="logoutUser()">
+        </section>
+      </header>
+      <nav></nav>
+      <main id="rooms">
+        <a href="game.html">Enter Match</a>
+      </main>
+      <section>
+        <p id="result"></p>
+      </section>
+      <section>
+        <input type="button" value="Create Room" onclick="roomCreate()">
+      </section>
+      <section>
+        <main>
+          <a href="deck.html">Create Deck</a>
+        </main>
+      </section>
+      <footer>
+        
+      </footer>
+    </body>
+    </html>

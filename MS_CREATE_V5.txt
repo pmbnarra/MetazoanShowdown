@@ -1,0 +1,68 @@
+create table room(
+	room_id serial not null,
+	room_player_id_1 INT,
+	room_player_id_2 INT,
+	room_current_player INT not null,
+	room_current_turn INT,
+        primary key(room_id)
+ );
+
+create table player (
+	player_id serial not null,
+	player_name VARCHAR(60),
+	player_password VARCHAR(60),
+	primary key(player_id)
+);
+
+create table card (
+	card_id SERIAL not null,
+	card_type BOOL not null,
+	card_name VARCHAR(60) not null,  -- card name
+	card_hp INT not null,
+	card_damage INT not null,
+	card_speed INT not null,
+	primary key (card_id)
+);
+
+create table cardstate(
+	cardstate_id INT,
+	cardstate_name VARCHAR(60) not null,
+ 	primary key(cardstate_id)
+ );
+
+create table playercard(
+	playercard_id SERIAL not null,
+	playercard_player INT not null,
+	playercard_card INT not null,
+	playercard_cardstate INT not null DEFAULT 1,
+	playercard_hp INT not null,
+	playercard_damage INT not null,
+	playercard_speed INT not null,
+	primary key(playercard_id)
+ );
+
+
+alter table room
+add constraint room_fk_player_1
+foreign key (room_player_id_1) references player(player_id) 
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+alter table room
+add constraint room_fk_player_2
+foreign key (room_player_id_2) references player(player_id) 
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+alter table playercard
+add constraint playercard_fk_player
+foreign key (playercard_player) references player(player_id) 
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+alter table playercard
+add constraint playercard_fk_card
+foreign key (playercard_card) references card(card_id) 
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+alter table playercard
+add constraint playercard_fk_cardstate
+foreign key (playercard_cardstate) references cardstate(cardstate_id) 
+ON DELETE NO ACTION ON UPDATE NO ACTION;

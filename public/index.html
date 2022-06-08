@@ -1,0 +1,43 @@
+<html>
+
+  <link rel="shortcut icon" type="image/png" href="images/icon.png"><!-- Fixes Favicon error?-->
+
+<head>
+  <title>Metazoan Showdown</title>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+ <!---- <script src="./javascripts/requests/roomRequests.js"></script> -->
+  <script src="./javascripts/requests/playersRequests.js"></script> 
+  <script src="./javascripts/authentication/login.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <section>
+      <p id="Header_Title">Metazoan Showdown</p>
+      <img id="Logo" src="/images/Logo_White.png">
+    </section>
+  </header>
+  <nav>
+  </nav>
+  <section>
+    <main >
+        <section>
+        <p> Login Name: <input type="text" id="name"> </p>
+        <p> Password: <input type="password" id="password"> </p>
+        <input type="button" value="Login" onclick="loginPlayer()">
+        <p id="result"></p>
+        </section>
+        
+      </main>
+    </section>
+  <main>
+    <section>
+      <p>Haven't registered yet? <a href="register.html">Sign up here</a></p>
+    </section>
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<html>
+
+  <link rel="shortcut icon" type="image/png" href="images/icon.png"><!-- Fixes Favicon error?-->
+
+<head>
+  <title>Metazoan Showdown</title>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <script src="./javascripts/requests/cardRequests.js"></script>
+  <script src="./javascripts/requests/roomRequests.js"></script> 
+  <script src="./javascripts/requests/playersRequests.js"></script> 
+  <script src="./javascripts/requests/actionRequests.js"></script> 
+  <script src="./javascripts/requests/endTurnRequests.js"></script> 
+  <script src="./javascripts/authentication/session.js"></script>
+  <script src="./javascripts/game.js"></script>
+
+  <script src="./javascripts/p5.min.js"></script>
+  <script src="./javascripts/renderers/card.js"></script>
+  <script src="./javascripts/renderers/board.js"></script>
+  <script src="./javascripts/managers/boardManager.js"></script>      
+  <script src="./javascripts/gamelib.js"></script>
+  
+</head>
+
+<body>
+  <header>
+    <section>
+      <p id="Header_Title">Metazoan Showdown</p>
+      <img id="Logo" src="/images/Logo_White.png">
+    </section>
+    <section class="auth"> 
+      <h4>User: <span  id="username"></span></h2>
+      <input type="button" value="Logout" onclick="logoutUser()">
+  </section>
+  </header>
+  <nav>
+  </nav>
+  <main id="game">
+    <!-- <img src="./images/Creature_Card.png" alt="Base Creature Card"> -->
+  <!--  <input type="button" value="Button" onclick="getCards()">
+    Name: <span id="name">0</span>
+    HP: <span id="hp">0</span>-->
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>
